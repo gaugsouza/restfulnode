@@ -7,6 +7,10 @@ public class Number {
 	private Integer numero;
 	private Boolean primo;
 	
+	public Number() {
+		
+	}
+	
 	public Number(Integer number, Boolean isPrime) {
 		this.numero = number;
 		this.primo = isPrime;
