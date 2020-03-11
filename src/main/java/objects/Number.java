@@ -4,24 +4,24 @@ import javax.ws.rs.Produces;
 
 @Produces("application/json")
 public class Number {
-	private Integer number;
-	private Boolean isPrime;
+	private Integer numero;
+	private Boolean primo;
 	
 	public Number(Integer number, Boolean isPrime) {
-		this.number = number;
-		this.isPrime = isPrime;
+		this.numero = number;
+		this.primo = isPrime;
 	}
 	
-	public Integer getNumber() {
-		return number;
+	public Integer getNumero() {
+		return numero;
 	}
-	public void setNumber(Integer number) {
-		this.number = number;
+	public void setNumero(Integer number) {
+		this.numero = number;
 	}
-	public Boolean getIsPrime() {
-		return isPrime;
+	public Boolean getPrimo() {
+		return primo;
 	}
-	public void setIsPrime(Boolean isPrime) {
-		this.isPrime = isPrime;
+	public void setPrimo(Boolean isPrime) {
+		this.primo = isPrime;
 	}
 }

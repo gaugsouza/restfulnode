@@ -10,19 +10,15 @@ import objects.Number;
 @Path("/prime-check")
 public class PrimeCheckService {
 	@GET
-	@Path("/{number}")
+	@Path("/{numero}")
 	@Produces("application/json")
-	public Response checkPrimeNumber(@PathParam("number") int number) {
-		Boolean isPrime = !(number <= 1);
+	public Response checkPrimeNumber(@PathParam("numero") int numero) {
+		Boolean primo = !(numero <= 1);
 		 
-        for (int counter = 2; counter < number; counter++) {
-        	isPrime = !(number % counter == 0);
-        	
-        	if(isPrime) 
-        		return Response.status(200).entity(new Number(number, isPrime)).build();
-        }
+        for (int counter = 2; counter < numero; counter++)
+        	primo = numero % counter == 0 ? false : primo;
         
-		return Response.status(200).entity(new Number(number, isPrime)).build();
+		return Response.status(200).entity(new Number(numero, primo)).build();
 	}
 	
 }
